@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns2="http://soacourse.unsw.edu.au/dldefinitions" xmlns:ns1="http://soacourse.unsw.edu.au/dlvalidator" name="DLValidationPT" targetNamespace="http://soacourse.unsw.edu.au/dlvalidator">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://soacourse.unsw.edu.au/dldefinitions" elementFormDefault="qualified" targetNamespace="http://soacourse.unsw.edu.au/dldefinitions" version="1.0">
+
+  <xs:element name="DLInfoMessage" type="tns:DLInputType"/>
+
+  <xs:element name="ValidationMessage" type="tns:ValidationType"/>
+
+  <xs:complexType name="DLInputType">
+    <xs:sequence>
+      <xs:element name="fullName" type="xs:string"/>
+      <xs:element name="dl" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ValidationType">
+    <xs:sequence>
+      <xs:element name="accept" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="validateResponse">
+    <wsdl:part element="ns2:ValidationMessage" name="dlresp">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validate">
+    <wsdl:part element="ns2:DLInfoMessage" name="dlreq">
+    </wsdl:part>
+  </wsdl:message>
+  
+  <wsdl:portType name="DLValidationPT">
+    <wsdl:operation name="validate">
+      <wsdl:input message="ns1:validate" name="validate">
+    </wsdl:input>
+      <wsdl:output message="ns1:validateResponse" name="validateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

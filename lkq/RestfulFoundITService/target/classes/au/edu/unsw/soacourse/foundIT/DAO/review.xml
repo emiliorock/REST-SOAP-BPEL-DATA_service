@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><reviews>
+	
+	
+	<review>
+		<reviewId>002</reviewId>
+		<appId>app002</appId>
+		<uId>reviewer002</uId>
+		<comments>bad</comments>
+		<decision>not ok</decision>
+	</review>
+	
+	<review>
+		<reviewId>003</reviewId>
+		<appId>app003</appId>
+		<uId>cyb</uId>
+		<comments>good</comments>
+		<decision>decline</decision>
+	</review>
+	
+	<review>
+		<reviewId>004</reviewId>
+		<appId>app003</appId>
+		<uId>cyb</uId>
+		<comments>good</comments>
+		<decision>decline</decision>
+	</review>
+	
+	<review>
+		<reviewId>005</reviewId>
+		<appId>app003</appId>
+		<uId>reviewer003</uId>
+		<comments>good</comments>
+		<decision>decline</decision>
+	</review>
+<review><reviewId>6585</reviewId><appId>0818</appId><uId>0118</uId><comments>sadf</comments><decision>sadf</decision></review></reviews>

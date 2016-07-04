@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<definitions name="autoCheck"
+        targetNamespace="http://autoCheck"
+        xmlns:tns="http://autoCheck"
+        xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+        xmlns="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+        xmlns:dlvalidator="http://soacourse.unsw.edu.au/dlvalidator"
+        xmlns:adrvalidator="http://soacourse.unsw.edu.au/adrvalidator"
+        >
+        
+        <import namespace="http://soacourse.unsw.edu.au/dlvalidator"
+		location="dlvalidator.wsdl" />
+		
+		<import namespace="http://soacourse.unsw.edu.au/adrvalidator"
+		location="adrvalidator.wsdl" />
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TYPE DEFINITION - List of types participating in this BPEL process 
+     The BPEL Designer will generate default request and response types
+     but you can define or import any XML Schema type and use them as part 
+     of the message types.
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->    
+    <types>
+        <schema attributeFormDefault="unqualified" elementFormDefault="qualified" 
+                targetNamespace="http://autoCheck" 
+                xmlns="http://www.w3.org/2001/XMLSchema">
+
+            <element name="autoCheckRequest">
+                <complexType>
+                    <sequence>
+                        <element name="fullName" type="string" />
+						<element name="dl" type="string" />
+						<element name="address" type="string" />
+                    </sequence>
+                </complexType>
+            </element>
+
+            <element name="autoCheckResponse">
+                <complexType>
+                    <sequence>
+                        <element name="output" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+        </schema>
+    </types>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     MESSAGE TYPE DEFINITION - Definition of the message types used as 
+     part of the port type defintions
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->    
+    <message name="autoCheckRequestMessage">
+        <part name="autoRequest" element="tns:autoCheckRequest"/>
+    </message>
+    <message name="autoCheckResponseMessage">
+        <part name="autoResponse" element="tns:autoCheckResponse"/>
+    </message>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     PORT TYPE DEFINITION - A port type groups a set of operations into
+     a logical service unit.
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->    
+
+    <!-- portType implemented by the autoCheck BPEL process -->
+    <portType name="autoCheck">
+        <operation name="process">
+            <input  message="tns:autoCheckRequestMessage" />
+            <output message="tns:autoCheckResponseMessage"/>
+        </operation>
+    </portType>   
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     PARTNER LINK TYPE DEFINITION
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->    
+	<plnk:partnerLinkType name="autoCheck">
+		<plnk:role name="autoCheckProvider" portType="tns:autoCheck" />
+	</plnk:partnerLinkType>
+	<plnk:partnerLinkType name="dlcheckLinkType">
+		<plnk:role name="dlValidator" portType="dlvalidator:DLValidationPT" />
+	</plnk:partnerLinkType>
+	<plnk:partnerLinkType name="adrcheckLinkType">
+		<plnk:role name="adrValidator" portType="adrvalidator:ADRValidationPT" />
+	</plnk:partnerLinkType>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     BINDING DEFINITION - Defines the message format and protocol details
+     for a web service.
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <binding name="autoCheckBinding" type="tns:autoCheck">
+    	<soap:binding style="document"
+    		transport="http://schemas.xmlsoap.org/soap/http" />
+    	<operation name="process">
+    		<soap:operation
+    			soapAction="http://soacourse.unsw.edu.au/autoCheck/process" />
+    		<input>
+    			<soap:body use="literal" />
+    		</input>
+    		<output>
+    			<soap:body use="literal" />
+    		</output>
+    	</operation>
+    </binding>
+    
+    <binding name="DLValidatorServiceBinding" type="dlvalidator:DLValidationPT">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="validate">
+			<soap:operation
+				soapAction="http://soacourse.unsw.edu.au/dlvalidation/validate" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+	
+	<binding name="ADRValidatorServiceBinding" type="adrvalidator:ADRValidationPT">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="validate">
+			<soap:operation
+				soapAction="http://soacourse.unsw.edu.au/adrvalidation/validate" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     SERVICE DEFINITION - A service groups a set of ports into
+     a service unit.
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <service name="autoCheckService">
+    	<port name="autoCheckPort" binding="tns:autoCheckBinding">
+    		<soap:address location="http://localhost:6060/ode/processes/autoCheck" />
+    	</port>
+    </service>
+</definitions>

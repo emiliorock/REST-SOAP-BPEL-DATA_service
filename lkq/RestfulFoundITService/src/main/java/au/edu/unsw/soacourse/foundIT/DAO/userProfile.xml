@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><users>
+
+	<user>
+		<id>321</id>
+		<detail>lkq111</detail>
+		<skill>hahahahaha</skill>
+		<exp/>
+	</user>
+
+	<user>
+		<id>671</id>
+		<detail>zhenjibashuai</detail>
+		<skill>xixixixx</skill>
+		<exp>heihei</exp>
+	</user>
+	<user>
+		<id>101</id>
+		<detail>fuuu</detail>
+		<skill>hahaha</skill>
+		<exp>kkk</exp>
+	</user>
+	<user>
+		<id>4333</id>
+		<detail>cyblai</detail>
+		<skill>sadfasf</skill>
+		<exp>asdafas</exp>
+	</user>
+
+	<user>
+		<id>
+			8490
+		</id>
+		<detail>lkq</detail>
+		<skill>shuai</skill>
+		<exp>zhenjibashuai</exp>
+	</user>
+	<user>
+		<id>888</id>
+		<detail>taishuaile</detail>
+		<skill>xixixixx</skill>
+		<exp>heihei</exp>
+	</user>
+	<user>
+		<id>6046</id>
+		<detail>lkq</detail>
+		<skill>shuai</skill>
+		<exp>zhenjibashuai</exp>
+	</user>
+</users>

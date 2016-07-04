@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><companyProfiles>
+	<companyProfile>
+		<companyID>1</companyID>
+		<managerID>3</managerID>
+		<name>Disney</name>
+		<url>http://www.disney.com</url>
+		<intro>ah ah ah</intro>
+		<img>http://img.lum.dolimg.com/v1/images/b5da8e4c0046a83b81dbd945719f6b354edd764b.jpeg</img>
+	</companyProfile>
+	
+	<companyProfile>
+		<companyID>2</companyID>
+		<managerID>4</managerID>
+		<name>Bllizard Entertainment</name>
+		<url>http://www.bllizard.com</url>
+		<intro>hohoho</intro>
+		<img>http://us.battle.net/static/images/nav-client/blizzard.png?v=58-51</img>
+	</companyProfile>
+</companyProfiles>

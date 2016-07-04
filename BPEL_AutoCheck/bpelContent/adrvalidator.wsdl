@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns2="http://soacourse.unsw.edu.au/adrdefinitions" xmlns:ns1="http://soacourse.unsw.edu.au/adrvalidator" name="ADRValidationPT" targetNamespace="http://soacourse.unsw.edu.au/adrvalidator">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://soacourse.unsw.edu.au/adrdefinitions" elementFormDefault="qualified" targetNamespace="http://soacourse.unsw.edu.au/adrdefinitions" version="1.0">
+
+  <xs:element name="ADRInfoMessage" type="tns:ADRInputType"/>
+
+  <xs:element name="ValidationMessage" type="tns:ValidationType"/>
+
+  <xs:complexType name="ADRInputType">
+    <xs:sequence>
+      <xs:element name="fullName" type="xs:string"/>
+      <xs:element name="adr" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ValidationType">
+    <xs:sequence>
+      <xs:element name="accept" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="validateResponse">
+    <wsdl:part element="ns2:ValidationMessage" name="adrresp">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validate">
+    <wsdl:part element="ns2:ADRInfoMessage" name="adrreq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ADRValidationPT">
+    <wsdl:operation name="validate">
+      <wsdl:input message="ns1:validate" name="validate">
+    </wsdl:input>
+      <wsdl:output message="ns1:validateResponse" name="validateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<companys>
+	<company>
+		<id>5</id>
+		<detail>lkq</detail>
+		<address>lai</address>
+		<phone>zzz</phone>
+	</company>
+	<company>
+		<id>5</id>
+		<detail>lkq</detail>
+		<address>lai</address>
+		<phone>zzz</phone>
+	</company>
+	<company>
+		<id>5</id>
+		<detail>lkq</detail>
+		<address>lai</address>
+		<phone>zzz</phone>
+	</company>
+	<company>
+		<id>5</id>
+		<detail>lkq</detail>
+		<address>lai</address>
+		<phone>zzz</phone>
+	</company>
+</companys>

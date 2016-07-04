@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><applications>
+<application>
+	<appID>1</appID>
+	<jobID>1</jobID>
+	<profileID>1</profileID>
+	<coverLetter>I am cool</coverLetter>
+	<status></status>
+</application>
+<application>
+	<appID>2</appID>
+	<jobID>1</jobID>
+	<profileID>2</profileID>
+	<coverLetter>very cool really</coverLetter>
+	<status>shortlisted</status>
+</application>
+<application>
+	<appID>3</appID>
+	<jobID>2</jobID>
+	<profileID>1</profileID>
+	<coverLetter>not cool</coverLetter>
+	<status>not-shortlisted</status>
+</application>
+<application>
+	<appID>4</appID>
+	<jobID>2</jobID>
+	<profileID>2</profileID>
+	<coverLetter>omg</coverLetter>
+	<status/>
+</application>
+<application>
+	<appID>5</appID>
+	<jobID>2</jobID>
+	<profileID>3</profileID>
+	<coverLetter>omg</coverLetter>
+	<status>rejected</status>
+</application>
+<application>
+	<appID>6</appID>
+	<jobID>1</jobID>
+	<profileID>3</profileID>
+	<coverLetter>I am cool</coverLetter>
+	<status>autoCheck-rejected</status>
+</application>
+<application>
+	<appID>7</appID>
+	<jobID>3</jobID>
+	<profileID>3</profileID>
+	<coverLetter>omg</coverLetter>
+	<status>rejected</status>
+</application>
+<application>
+	<appID>8</appID>
+	<jobID>4</jobID>
+	<profileID>4</profileID>
+	<coverLetter>I am cool</coverLetter>
+	<status/>
+</application>
+<application>
+	<appID>9</appID>
+	<jobID>5</jobID>
+	<profileID>1</profileID>
+	<coverLetter>I am cool</coverLetter>
+	<status/>
+</application>
+<application>
+	<appID>10</appID>
+	<jobID>5</jobID>
+	<profileID>2</profileID>
+	<coverLetter>very cool really</coverLetter>
+	<status>shortlisted</status>
+</application>
+</applications>

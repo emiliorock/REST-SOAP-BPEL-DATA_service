@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://soacourse.unsw.edu.au/dlvalidator" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msgdef="http://soacourse.unsw.edu.au/dldefinitions"
+	name="DLValidatorService" targetNamespace="http://soacourse.unsw.edu.au/dlvalidator">
+	<wsdl:types>
+		<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema">
+			<xsd:import namespace="http://soacourse.unsw.edu.au/dldefinitions"
+				schemaLocation="../xsd/dlmessages.xsd" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="DLValidationRequestMsg">
+		<wsdl:part element="msgdef:DLInfoMessage" name="dlreq" />
+	</wsdl:message>
+	<wsdl:message name="DLValidationResponseMsg">
+		<wsdl:part element="msgdef:ValidationMessage" name="dlresp" />
+	</wsdl:message>
+	<wsdl:portType name="DLValidationPT">
+		<wsdl:operation name="validate">
+			<wsdl:input message="tns:DLValidationRequestMsg" />
+			<wsdl:output message="tns:DLValidationResponseMsg" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="DLValidatorSOAPBinding" type="tns:DLValidationPT">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="validate">
+			<soap:operation
+				soapAction="http://soacourse.unsw.edu.au/dlvalidator/validate" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="DLValidatorService">
+		<wsdl:port binding="tns:DLValidatorSOAPBinding" name="DLValidatorSOAP">
+			<soap:address location="http://www.example.org/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

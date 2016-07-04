@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><jobPostings>
+<job>
+	<jobID>1</jobID>
+	<companyID>1</companyID>
+	<companyName>Disney</companyName>
+	<salaryRate>100</salaryRate>
+	<positionType>IT</positionType>
+	<location>China</location>
+	<description>IT</description>
+	<status>open</status>
+</job>
+<job>
+	<jobID>2</jobID>
+	<companyID>2</companyID>
+	<companyName>Bllizard Entertainment</companyName>
+	<salaryRate>200</salaryRate>
+	<positionType>IT</positionType>
+	<location>U.S.A</location>
+	<description>Data Mining</description>
+	<status>close</status>
+</job>
+<job>
+	<jobID>3</jobID>
+	<companyID>2</companyID>
+	<companyName>Bllizard Entertainment</companyName>
+	<salaryRate>100</salaryRate>
+	<positionType>Artist</positionType>
+	<location>U.S.A</location>
+	<description>New Movie</description>
+	<status>in-review</status>
+</job>
+<job>
+	<jobID>4</jobID>
+	<companyID>2</companyID>
+	<companyName>Bllizard Entertainment</companyName>
+	<salaryRate>100</salaryRate>
+	<positionType>Developer</positionType>
+	<location>U.S.A</location>
+	<description>Games</description>
+	<status>processed</status>
+</job>
+<job>
+	<jobID>5</jobID>
+	<companyID>1</companyID>
+	<companyName>Disney</companyName>
+	<salaryRate>100</salaryRate>
+	<positionType>IT</positionType>
+	<location>U.S.A</location>
+	<description>Games</description>
+	<status>sent-invitations</status>
+</job>
+</jobPostings>

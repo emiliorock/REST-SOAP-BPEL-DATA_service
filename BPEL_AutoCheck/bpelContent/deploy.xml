@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:adrvalidator.soacourse.unsw.edu.au="http://adrvalidator.soacourse.unsw.edu.au/" xmlns:autoCheck="http://autoCheck" xmlns:dlvalidator.soacourse.unsw.edu.au="http://dlvalidator.soacourse.unsw.edu.au/">
+  <process name="autoCheck:autoCheck">
+    <active>true</active>
+    <retired>false</retired>
+    <process-events generate="all"/>
+    <provide partnerLink="client">
+      <service name="autoCheck:autoCheckService" port="autoCheckPort"/>
+    </provide>
+    <invoke partnerLink="dlvalidator">
+      <service name="dlvalidator.soacourse.unsw.edu.au:DLValidationPTImplService" port="DLValidationPTImplPort"/>
+    </invoke>
+    <invoke partnerLink="adrvalidator">
+      <service name="adrvalidator.soacourse.unsw.edu.au:ADRValidationPTImplService" port="ADRValidationPTImplPort"/>
+    </invoke>
+  </process>
+</deploy>

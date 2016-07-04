@@ -1,0 +1,18 @@
+<addresslist>
+<person>
+<fullname>Amy Lee</fullname>
+<address>ABC10000</address>
+</person>
+<person>
+<fullname>Jack Bee</fullname>
+<address>XYZ30000</address>
+</person>
+<person>
+<fullname>Sherry Hu</fullname>
+<address>93 Doncaster Avenue</address>
+</person>
+<person>
+<fullname>MengXin Huang</fullname>
+<address>Barker Street</address>
+</person>
+</addresslist>

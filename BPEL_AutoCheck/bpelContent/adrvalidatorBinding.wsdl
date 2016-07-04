@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://adrvalidator.soacourse.unsw.edu.au/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns3="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://soacourse.unsw.edu.au/adrvalidator" name="ADRValidationPTImplService" targetNamespace="http://adrvalidator.soacourse.unsw.edu.au/">
+  <wsdl:import location="adrvalidator.wsdl" namespace="http://soacourse.unsw.edu.au/adrvalidator">
+    </wsdl:import>
+  <wsdl:binding name="ADRValidationPTImplServiceSoapBinding" type="ns1:ADRValidationPT">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="validate">
+      <soap:operation soapAction="http://soacourse.unsw.edu.au/adrvalidator/validate" style="document"/>
+      <wsdl:input name="validate">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ADRValidationPTImplService">
+    <wsdl:port binding="tns:ADRValidationPTImplServiceSoapBinding" name="ADRValidationPTImplPort">
+      <soap:address location="http://localhost:8080/ADRValidatorService/adrvalidator"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

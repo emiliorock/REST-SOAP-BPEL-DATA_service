@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><reviewers>
+<reviewer>
+	<reviewerID>1</reviewerID>
+	<companyID>1</companyID>
+	<username>Leon</username>
+	<password>12345</password>
+	<professionalSkills>IT</professionalSkills>
+	<status>available</status>
+</reviewer>
+<reviewer>
+	<reviewerID>2</reviewerID>
+	<companyID>2</companyID>
+	<username>Mary</username>
+	<password>54321</password>
+	<professionalSkills>IT</professionalSkills>
+	<status>not-available</status>
+</reviewer>
+<reviewer>
+	<reviewerID>3</reviewerID>
+	<companyID>1</companyID>
+	<username>Sherry</username>
+	<password>sherry</password>
+	<professionalSkills>photoshop</professionalSkills>
+	<status>non-available</status>
+</reviewer>
+<reviewer>
+	<reviewerID>4</reviewerID>
+	<companyID>2</companyID>
+	<username>Henry</username>
+	<password>henry</password>
+	<professionalSkills>HR</professionalSkills>
+	<status>non-available</status>
+</reviewer>
+
+</reviewers>

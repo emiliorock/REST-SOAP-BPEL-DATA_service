@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><users>
+	<user>
+		<userID>1</userID>
+		<email>user1@email.com</email>
+		<password>user1</password>
+		<userType>user</userType>
+	</user>
+	
+	<user>
+		<userID>2</userID>
+		<email>user2@email.com</email>
+		<password>user2</password>
+		<userType>user</userType>
+	</user>
+	
+	<user>
+		<userID>3</userID>
+		<email>user3@email.com</email>
+		<password>user3</password>
+		<userType>manager</userType>
+	</user>
+	
+	<user>
+		<userID>4</userID>
+		<email>user4@email.com</email>
+		<password>user4</password>
+		<userType>manager</userType>
+	</user>
+	
+		<user>
+		<userID>5</userID>
+		<email>user5@email.com</email>
+		<password>user5</password>
+		<userType>user</userType>
+	</user>
+	
+	<user>
+		<userID>6</userID>
+		<email>user6@email.com</email>
+		<password>user6</password>
+		<userType>user</userType>
+	</user>
+
+	<user>
+		<userID>7</userID>
+		<email>user7@email.com</email>
+		<password>user7</password>
+		<userType>user</userType>
+	</user>
+	
+	<user>
+		<userID>8</userID>
+		<email>user8@email.com</email>
+		<password>user8</password>
+		<userType>manager</userType>
+	</user>
+<user><userID>9</userID><email>sherryhuhong@qq.com</email><password>sherry</password><userType>user</userType></user></users>

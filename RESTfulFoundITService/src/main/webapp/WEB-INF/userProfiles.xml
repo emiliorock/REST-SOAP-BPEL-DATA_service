@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><userProfiles>
+	<profile>
+		<profileID>1</profileID>
+		<userID>1</userID>
+		<firstname>Sherry</firstname>
+		<lastname>Hu</lastname>
+		<email>user1@email.com</email>
+		<phone>0451866127</phone>
+		<driverLicense></driverLicense>
+		<address>93 Doncaster Avenue</address>
+		<professionalSkills>Java</professionalSkills>
+		<experience>2 Years Java Programming</experience>
+		<img>https://lh5.googleusercontent.com/-gbYpveVsLak/AAAAAAAAAAI/AAAAAAAAAYE/NDs_rHoRhtY/s0-c-k-no-ns/photo.jpg</img>
+	</profile>
+	
+	
+	<profile>
+		<profileID>2</profileID>
+		<userID>2</userID>
+		<firstname>Mengxin</firstname>
+		<lastname>Huang</lastname>
+		<email>user2@email.com</email>
+		<phone>0451866999</phone>
+		<driverLicense>MXH345</driverLicense>
+		<address></address>
+		<professionalSkills>Perl</professionalSkills>
+		<experience>2 years developer</experience>
+		<img>http://img.lum.dolimg.com/v1/images/6d7454cea6644379adc7e529c5790a28078a2823.jpeg</img>
+	</profile>
+
+
+	<profile>
+		<profileID>3</profileID>
+		<userID>5</userID>
+		<firstname>Sherry</firstname>
+		<lastname>Hello</lastname>
+		<email>user5@email.com</email>
+		<phone>1111111111</phone>
+		<driverLicense></driverLicense>
+		<address>Wrong Address</address>
+		<professionalSkills>python</professionalSkills>
+		<experience>2 years developer</experience>
+		<img>http://img.lum.dolimg.com/v1/images/open-uri20150422-20810-1h21b0t_06ca1f89.jpeg</img>
+	</profile>
+	
+	
+	<profile>
+		<profileID>4</profileID>
+		<userID>6</userID>
+		<firstname>Echo</firstname>
+		<lastname>World</lastname>
+		<email>user6@email.com</email>
+		<phone>2222222222</phone>
+		<driverLicense>wrong</driverLicense>
+		<address></address>
+		<professionalSkills>perl</professionalSkills>
+		<experience>2 years developer</experience>
+		<img>http://img.lum.dolimg.com/v1/images/191a0ea89f78d30cbc7acc07cb17d996372458c6.jpeg</img>
+	</profile>
+</userProfiles>
